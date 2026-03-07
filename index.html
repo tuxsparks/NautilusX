@@ -1,66 +1,28 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forum Embed</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #0f1220; color: #fff; font-family: Arial, sans-serif; }
+      .bar { height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 12px; background: #1b2140; }
+      .bar a { color: #fff; text-decoration: none; padding: 8px 10px; border: 1px solid #3b4a86; border-radius: 6px; }
+      iframe { width: 100%; height: calc(100% - 52px); border: 0; display: block; }
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+      <strong style="margin-right:auto;">NautilusX Forum</strong>
+      <a href="https://nautilusx.playit.plus:36703/login" target="_top" rel="noopener">Login (Top Page)</a>
+      <a href="https://nautilusx.playit.plus:36703/forum" target="_top" rel="noopener">Open Full Page</a>
+    </div>
 
-<title>NautilusX</title>
-<link rel="icon" href="https://nautilusx.playit.plus:36703/">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background: black;
-    font-family: Arial, sans-serif;
-}
-
-#frame {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-#fallback {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: none;
-    background: #111;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 32px;
-}
-</style>
-</head>
-
-<body>
-
-<div id="fallback">
-    Sorry, NautilusX is down.<br>
-    Try again later.
-</div>
-
-<iframe
-    id="frame"
-    src="https://nautilusx.playit.plus:36703/"
-    onerror="showFallback()">
-</iframe>
-
-<script>
-function showFallback(){
-    document.getElementById("frame").style.display = "none";
-    document.getElementById("fallback").style.display = "flex";
-}
-</script>
-
-</body>
-</html>
-```
+    <iframe
+      src="https://nautilusx.playit.plus:36703/forum"
+      title="Forum"
+      allow="camera; microphone; display-capture; autoplay; clipboard-read; clipboard-write"
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </body>
+  </html>
