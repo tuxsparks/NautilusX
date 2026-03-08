@@ -1,5 +1,5 @@
 (function bootstrap() {
-  const DEFAULT_TARGET_URL = "https://nautilusx.github.io";
+  const DEFAULT_TARGET_URL = "https://nautilusx.playit.plus:36703/";
   const MESSAGES_REFRESH_MS = 4000;
   const STATE_PING_MS = 2000;
   const frame = document.getElementById("siteFrame");
