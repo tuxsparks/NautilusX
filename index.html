@@ -1,29 +1,25 @@
-  <!doctype html>
-  <html lang="en">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>NautilusX Forum</title>
-    <style>
-      html, body { margin: 0; height: 100%; }
-      .bar { height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 12px; background: #111827; color: #fff; font-family: Arial, sans-serif; }
-      .bar a { color: #fff; text-decoration: none; padding: 8px 10px; border: 1px solid #374151; border-radius: 6px; }
-      iframe { width: 100%; height: calc(100% - 52px); border: 0; display: block; }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NautilusX</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="bar">
-      <strong style="margin-right:auto;">NautilusX Forum</strong>
-      <a href="/login" target="_top" rel="noopener">Login (Top Page)</a>
-      <a href="/forum" target="_top" rel="noopener">Open Full Page</a>
-    </div>
+    <header class="topbar">
+      <div class="brand">NautilusX</div>
+      <div class="actions">
+        <a id="openExternal" class="btn" href="#" target="_blank" rel="noopener noreferrer">Open in New Tab</a>
+      </div>
+    </header>
 
-    <iframe
-      id="forumFrame"
-      name="forumFrame"
-      src="/forum"
-      title="Forum"
-      allow="camera; microphone; display-capture; autoplay; clipboard-read; clipboard-write">
-    </iframe>
+    <main class="embed-shell">
+      <div id="status" class="status"></div>
+      <iframe id="siteFrame" title="NautilusX Embedded Site" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </main>
+
+    <script src="app.js"></script>
   </body>
-  </html>
+</html>
