@@ -11,15 +11,14 @@
   let messagesRefreshTimer = null;
 
   const params = new URLSearchParams(window.location.search);
-  const requestedTarget = params.get("target");
   const titleOverride = params.get("title");
   const faviconOverride = normalizeUrl(params.get("favicon"), window.location.origin + "/");
   const allowAutoTitle = !titleOverride;
   const allowAutoFavicon = !faviconOverride;
 
-  const target = normalizeUrl(requestedTarget || DEFAULT_TARGET_URL);
+  const target = normalizeUrl(DEFAULT_TARGET_URL);
   if (!target) {
-    renderStatus("Invalid target URL. Use ?target=https://your-site");
+    renderStatus("Invalid DEFAULT_TARGET_URL in app.js");
     return;
   }
 
@@ -34,7 +33,7 @@
   frame.src = target.toString();
 
   if (target.origin === window.location.origin) {
-    renderStatus("Embedded target is same-origin. If this loops, use ?target=https://your-real-site");
+    renderStatus("Embedded target is same-origin. If this loops, update DEFAULT_TARGET_URL in app.js");
   } else {
     renderStatus("Embedding: " + target.origin);
   }
